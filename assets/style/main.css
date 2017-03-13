@@ -1491,13 +1491,13 @@ textarea,
   z-index: 2; }
   /* line 19, components/common/_header.scss */
   .Header-logo {
-    height: 35px;
+    height: 40px;
     width: auto;
-    padding-top: 0px; }
+    padding-top: 10px; }
     @media only screen and (max-width: 640px) {
       /* line 19, components/common/_header.scss */
       .Header-logo {
-        height: 25px;
+        height: 35px;
         width: auto; } }
   /* line 29, components/common/_header.scss */
   .Header-scroll {
@@ -1523,15 +1523,13 @@ textarea,
       color: #555;
       font-size: 14px;
       padding: 0 20px;
-      padding-top: 4px;
       transition: color .7s; }
       @media only screen and (max-width: 640px) {
         /* line 47, components/common/_header.scss */
         .Header-menu-item {
           font-size: 12px;
-          padding: 0 7px;
-          padding-top: 4px; } }
-      /* line 60, components/common/_header.scss */
+          padding: 0 10px; } }
+      /* line 58, components/common/_header.scss */
       .Header-menu-item:hover {
         transition: color .2s;
         color: #aaa; }
@@ -1583,21 +1581,13 @@ textarea,
   background: #fff;
   padding: 8% 14%;
   color: #555; }
-  @media only screen and (max-width: 640px) {
-    /* line 3, pages/_concept.scss */
-    .concept {
-      padding: 50px 14%; } }
-  /* line 17, pages/_concept.scss */
+  /* line 14, pages/_concept.scss */
   .concept-title {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 45px; }
-    @media only screen and (max-width: 640px) {
-      /* line 17, pages/_concept.scss */
-      .concept-title {
-        margin-bottom: 30px; } }
-  /* line 27, pages/_concept.scss */
+  /* line 21, pages/_concept.scss */
   .concept-body {
     font-size: 13px;
     line-height: 2em;
@@ -1610,7 +1600,7 @@ textarea,
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: url(/mrkm/assets/img/background-material/Body.svg), url(/mrkm/assets/img/background-material/Body2.svg);
+  background-image: url(../img/background-material/Body.svg), url(../img/background-material/Body2.svg);
   background-position: left top, right bottom;
   background-size: 66.6% 100%,  50% 16%;
   background-repeat: no-repeat;
@@ -1637,11 +1627,7 @@ textarea,
     font-size: 30px;
     color: #777;
     margin: 0; }
-    @media only screen and (max-width: 640px) {
-      /* line 38, pages/_index.scss */
-      .first-view .my-name {
-        font-size: 24px; } }
-  /* line 47, pages/_index.scss */
+  /* line 44, pages/_index.scss */
   .first-view .job {
     font-size: 12px;
     color: #aaa;
@@ -1651,11 +1637,7 @@ textarea,
 .category {
   background: #eee;
   padding: 8% 14%; }
-  @media only screen and (max-width: 640px) {
-    /* line 3, pages/_category.scss */
-    .category {
-      padding: 50px 14%; } }
-  /* line 15, pages/_category.scss */
+  /* line 12, pages/_category.scss */
   .category-title {
     text-align: center;
     font-weight: bold;
@@ -1663,27 +1645,23 @@ textarea,
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
     font-size: 30px;
     margin-bottom: 45px; }
-    @media only screen and (max-width: 640px) {
-      /* line 15, pages/_category.scss */
-      .category-title {
-        margin-bottom: 30px; } }
-  /* line 27, pages/_category.scss */
+  /* line 21, pages/_category.scss */
   .category-items {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 20px; }
-  /* line 35, pages/_category.scss */
+  /* line 29, pages/_category.scss */
   .category-panel {
     position: relative; }
-  /* line 39, pages/_category.scss */
+  /* line 33, pages/_category.scss */
   .category-cover {
     background: rgba(255, 255, 255, 0.34);
     width: 100%;
     height: 100%;
     position: absolute; }
-  /* line 47, pages/_category.scss */
+  /* line 41, pages/_category.scss */
   .category-name {
     font-size: 20px;
     color: #555;
@@ -1692,13 +1670,13 @@ textarea,
     margin-left: 10px;
     display: none;
     text-transform: capitalize; }
-  /* line 62, pages/_category.scss */
+  /* line 56, pages/_category.scss */
   .category-link {
     position: relative;
     display: block;
     text-align: center;
     padding: 20px 10px; }
-  /* line 69, pages/_category.scss */
+  /* line 63, pages/_category.scss */
   .category-img {
     background: #aaa;
     width: 100%;
@@ -1706,7 +1684,7 @@ textarea,
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
     background-clip: padding-box;
     border: solid 3px #fff; }
-  /* line 78, pages/_category.scss */
+  /* line 72, pages/_category.scss */
   .category-hoverBord {
     position: absolute;
     display: none;
@@ -1718,14 +1696,14 @@ textarea,
     top: 0;
     left: 0;
     box-sizing: border-box; }
-    /* line 89, pages/_category.scss */
+    /* line 83, pages/_category.scss */
     .category-hoverBord-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 100%; }
-    /* line 96, pages/_category.scss */
+    /* line 90, pages/_category.scss */
     .category-hoverBord-p {
       position: relative;
       top: 10px;
@@ -1734,7 +1712,7 @@ textarea,
 /* line 3, pages/_profile.scss */
 .profile {
   background: liner-gradient(#4da7c3 0, #72bbd1 100%);
-  background-image: url(/mrkm/assets/img/background-material/trees.png), linear-gradient(rgba(33, 154, 191, 0.8) 0, #219abf 100%);
+  background-image: url(../img/background-material/trees.png), linear-gradient(rgba(33, 154, 191, 0.8) 0, #219abf 100%);
   background-position: center bottom, center;
   background-size: 100% auto, 100% auto;
   background-repeat: no-repeat;
@@ -1744,35 +1722,27 @@ textarea,
   padding: 8% 14%;
   text-align: center;
   color: #fff; }
-  @media only screen and (max-width: 640px) {
-    /* line 3, pages/_profile.scss */
-    .profile {
-      padding: 50px 14%; } }
-  /* line 33, pages/_profile.scss */
+  /* line 30, pages/_profile.scss */
   .profile-title {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 45px; }
-    @media only screen and (max-width: 640px) {
-      /* line 33, pages/_profile.scss */
-      .profile-title {
-        margin-bottom: 30px; } }
-  /* line 42, pages/_profile.scss */
+  /* line 36, pages/_profile.scss */
   .profile-body {
     font-size: 13px;
     margin-bottom: 40px;
     line-height: 1.7em; }
-  /* line 48, pages/_profile.scss */
+  /* line 42, pages/_profile.scss */
   .profile-h2 {
     font-size: 20px;
     display: inline-block;
     margin-bottom: 15px; }
-  /* line 54, pages/_profile.scss */
+  /* line 48, pages/_profile.scss */
   .profile-link {
     text-decoration: none;
     color: #d3e9e5;
     transition: .3s; }
-    /* line 58, pages/_profile.scss */
+    /* line 52, pages/_profile.scss */
     .profile-link:hover {
       color: #fff; }
 
@@ -1794,17 +1764,13 @@ textarea,
   padding: 8% 14%;
   font-size: 13px;
   color: #555; }
-  @media only screen and (max-width: 640px) {
-    /* line 18, pages/_work.scss */
-    .explanation {
-      padding: 50px 14%; } }
-  /* line 25, pages/_work.scss */
+  /* line 22, pages/_work.scss */
   .explanation-head {
     font-size: 25px;
     margin-bottom: 30px;
     font-weight: bold; }
 
-/* line 32, pages/_work.scss */
+/* line 29, pages/_work.scss */
 iframe {
   width: 100%;
   height: 100%; }
