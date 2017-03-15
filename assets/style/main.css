@@ -1538,7 +1538,7 @@ textarea,
 
 /* line 3, components/common/_footer.scss */
 .Footer {
-  background: #0c637b;
+  background: #3d2929;
   padding: 20px 3%; }
   /* line 13, components/common/_footer.scss */
   .Footer-border {
@@ -1549,13 +1549,13 @@ textarea,
     text-align: center;
     font-size: 14px;
     border-radius: 10px; }
-  /* line 23, components/common/_footer.scss */
+  /* line 24, components/common/_footer.scss */
   .Footer-sns {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff; }
-    /* line 29, components/common/_footer.scss */
+    /* line 30, components/common/_footer.scss */
     .Footer-sns-item {
       position: relative;
       font-size: 14px;
@@ -1569,10 +1569,10 @@ textarea,
       text-decoration: none;
       color: #fff;
       transition: .3s; }
-      /* line 45, components/common/_footer.scss */
+      /* line 46, components/common/_footer.scss */
       .Footer-sns-item:hover {
         background: rgba(255, 255, 255, 0.2); }
-  /* line 51, components/common/_footer.scss */
+  /* line 52, components/common/_footer.scss */
   .Footer-copyright {
     text-align: center;
     font-size: 8px;
@@ -1581,7 +1581,7 @@ textarea,
 /* line 3, pages/_concept.scss */
 .concept {
   background: #fff;
-  padding: 8% 14%;
+  padding: 6% 14%;
   color: #555; }
   @media only screen and (max-width: 640px) {
     /* line 3, pages/_concept.scss */
@@ -1596,8 +1596,9 @@ textarea,
     @media only screen and (max-width: 640px) {
       /* line 17, pages/_concept.scss */
       .concept-title {
-        margin-bottom: 30px; } }
-  /* line 27, pages/_concept.scss */
+        margin-bottom: 30px;
+        font-size: 25px; } }
+  /* line 28, pages/_concept.scss */
   .concept-body {
     font-size: 13px;
     line-height: 2em;
@@ -1650,7 +1651,7 @@ textarea,
 /* line 3, pages/_category.scss */
 .category {
   background: #eee;
-  padding: 8% 14%; }
+  padding: 6% 14%; }
   @media only screen and (max-width: 640px) {
     /* line 3, pages/_category.scss */
     .category {
@@ -1658,22 +1659,21 @@ textarea,
   /* line 15, pages/_category.scss */
   .category-title {
     text-align: center;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+    color: #444;
     font-size: 30px;
     margin-bottom: 45px; }
     @media only screen and (max-width: 640px) {
       /* line 15, pages/_category.scss */
       .category-title {
-        margin-bottom: 30px; } }
+        margin-bottom: 30px;
+        font-size: 25px; } }
   /* line 27, pages/_category.scss */
   .category-items {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 20px; }
+    margin-bottom: -20px; }
   /* line 35, pages/_category.scss */
   .category-panel {
     position: relative; }
@@ -1733,46 +1733,75 @@ textarea,
 
 /* line 3, pages/_profile.scss */
 .profile {
-  background: liner-gradient(#4da7c3 0, #72bbd1 100%);
-  background-image: url(/mrkm/assets/img/background-material/trees.png), linear-gradient(rgba(33, 154, 191, 0.8) 0, #219abf 100%);
-  background-position: center bottom, center;
-  background-size: 100% auto, 100% auto;
-  background-repeat: no-repeat;
+  background-image: url(/mrkm/assets/img/background-material/trees.png), url(/mrkm/assets/img/background-material/border2.svg), url(/mrkm/assets/img/background-material/profile-title.png), radial-gradient(#aa5e5e 30%, #9c3737 100%);
+  background-position: center bottom, center, right top, center;
+  background-size: 100% auto, 40px 10px, 180px auto, 100% auto;
+  background-repeat: no-repeat, repeat, no-repeat, no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8% 14%;
+  padding: 6% 14%;
   text-align: center;
   color: #fff; }
   @media only screen and (max-width: 640px) {
     /* line 3, pages/_profile.scss */
     .profile {
+      background-image: url(/mrkm/assets/img/background-material/trees.png), url(/mrkm/assets/img/background-material/border2.svg), radial-gradient(#aa5e5e 30%, #9c3737 100%);
+      background-position: center bottom, center, center;
+      background-size: 200% auto, 40px 10px, 100% auto;
+      background-repeat: no-repeat, repeat, no-repeat; } }
+  @media only screen and (max-width: 640px) {
+    /* line 3, pages/_profile.scss */
+    .profile {
       padding: 50px 14%; } }
-  /* line 33, pages/_profile.scss */
+  /* line 51, pages/_profile.scss */
+  .profile-face {
+    width: 170px;
+    height: 170px;
+    border-radius: 100px;
+    border: solid 3px #fff;
+    margin-bottom: 40px; }
+    @media only screen and (max-width: 640px) {
+      /* line 51, pages/_profile.scss */
+      .profile-face {
+        width: 120px;
+        height: 120px; } }
+  /* line 63, pages/_profile.scss */
   .profile-title {
+    display: none;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 45px; }
     @media only screen and (max-width: 640px) {
-      /* line 33, pages/_profile.scss */
+      /* line 63, pages/_profile.scss */
       .profile-title {
-        margin-bottom: 30px; } }
-  /* line 42, pages/_profile.scss */
+        margin-bottom: 30px;
+        font-size: 25px; } }
+  /* line 74, pages/_profile.scss */
   .profile-body {
-    font-size: 13px;
-    margin-bottom: 40px;
+    font-size: 12px;
+    margin-bottom: 25px;
     line-height: 1.7em; }
-  /* line 48, pages/_profile.scss */
+    @media only screen and (max-width: 640px) {
+      /* line 74, pages/_profile.scss */
+      .profile-body {
+        font-size: 12px; } }
+  /* line 83, pages/_profile.scss */
   .profile-h2 {
     font-size: 20px;
     display: inline-block;
+    font-weight: normal;
     margin-bottom: 15px; }
-  /* line 54, pages/_profile.scss */
+    @media only screen and (max-width: 640px) {
+      /* line 83, pages/_profile.scss */
+      .profile-h2 {
+        font-size: 18px; } }
+  /* line 93, pages/_profile.scss */
   .profile-link {
     text-decoration: none;
-    color: #d3e9e5;
+    color: rgba(255, 255, 255, 0.8);
     transition: .3s; }
-    /* line 58, pages/_profile.scss */
+    /* line 97, pages/_profile.scss */
     .profile-link:hover {
       color: #fff; }
 
@@ -1791,7 +1820,7 @@ textarea,
 
 /* line 18, pages/_work.scss */
 .explanation {
-  padding: 8% 14%;
+  padding: 6% 14%;
   font-size: 13px;
   color: #555; }
   @media only screen and (max-width: 640px) {
