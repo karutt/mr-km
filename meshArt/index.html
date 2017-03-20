@@ -21,8 +21,8 @@
 
 	<link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-	<link href="/mrkm/assets/style/main.css" rel="stylesheet" />
-	<script src="/mrkm/assets/js/syntaxhightlighter.js"></script>
+	<link href="/assets/style/main.css" rel="stylesheet" />
+	<script src="/assets/js/syntaxhightlighter.js"></script>
 	<script type="text/javascript">
 	SyntaxHighlighter.defaults['toolbar'] = false;
 	// SyntaxHighlighter.defaults['gutter'] = false;
@@ -38,7 +38,7 @@
 
 
 	<div class="WorkHeader-head">
-		<a href="../" class="WorkHeader-head-phrase"><img src="/mrkm/assets/img/logo2.png" alt="" class="WorkHeader-logo" /></a>
+		<a href="../" class="WorkHeader-head-phrase"><img src="../assets/img/logo2.png" alt="" class="WorkHeader-logo" /></a>
 	</div>
 
 
@@ -54,7 +54,7 @@
 	<div class="WorkHeader-body">
 		<ul class="WorkHeader-menu">
 			<li>
-<a href=".info1" class="WorkHeader-menu-item">			<img src="/mrkm/assets/img/background-material/infoImage.png" class="WorkHeader-menu-image" alt="Infoimage" />
+<a href=".info1" class="WorkHeader-menu-item">			<img src="/assets/img/background-material/infoImage.png" class="WorkHeader-menu-image" alt="Infoimage" />
 </a>			</li>
 			<li><a href=".info2" class="WorkHeader-menu-item" style="margin-top: 2px">	&lt;/&gt;</a></li>
 			<!-- <li><a href="../#category" class="WorkHeader-menu-item">Work</a></li> -->
@@ -199,10 +199,10 @@ endShape();
 }
 </pre>
 
-<img src="/mrkm/assets/img/meshArt/code1.png" class="explanation-image" alt="Code1" />
+<img src="/assets/img/meshArt/code1.png" class="explanation-image" alt="Code1" />
 
 beginshape(), vertex(), endShape(),の３つの関数を使い、格子状に並ぶ点から、順次タイルの平面を作ります。
-<img src="/mrkm/assets/img/meshArt/grid2d.png" class="explanation-image" alt="Grid2d" />
+<img src="/assets/img/meshArt/grid2d.png" class="explanation-image" alt="Grid2d" />
 ３つの関数について詳しく知りたい場合は,Processing公式サイトの
 <a href="https://processing.org/reference/beginShape_.html" target="_blank">リファレンス</a>を参照してください。図を使いわかりやすく説明がされています。
 </div>
@@ -230,7 +230,7 @@ endShape();
 </pre>
 
 結果を見てみましょう。
-<img src="/mrkm/assets/img/meshArt/code2.png" class="explanation-image" alt="Code2" />
+<img src="/assets/img/meshArt/code2.png" class="explanation-image" alt="Code2" />
 float dist = sqrt(x*x + y*y);<br>
 この行は原点を中心に、離れれば離れるほど距離(dist)が大きくなることを示します。
 それを三角関数sinの角度として割り当てます。そうすると、原点を中心としたサインカーブが生まれ、
@@ -274,10 +274,10 @@ endShape();
 }
 </pre>
 
-<img src="/mrkm/assets/img/meshArt/code4.png" class="explanation-image" alt="Code4" />
+<img src="/assets/img/meshArt/code4.png" class="explanation-image" alt="Code4" />
 
 u, vの媒介変数をuMin, uMaxとvMin, vMaxの規定された範囲の値で制御します。
-<img src="/mrkm/assets/img/meshArt/code3.png" class="explanation-image" alt="Code3" />
+<img src="/assets/img/meshArt/code3.png" class="explanation-image" alt="Code3" />
 これら変数で何ができるようになったのでしょうか。uMin, uMax, vMin, vMaxはu,vの範囲、
 すなわち曲面の大きさを調整できます。uCount, vCountはグリッドのキメの細かさ、すなわち
 曲面の滑らかさ・解像度を調整します。上の画像でu,vの範囲を変えずに　uCount = 100; vCount = 100;
@@ -302,12 +302,12 @@ z = cos(α)・r;
 
 
 	<!--
-	<script src="/mrkm/assets/js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="/mrkm/assets/js/jquery.easing.1.3.js"></script>
-	<script src="/mrkm/assets/js/script.js"></script> -->
-	<script src="/mrkm/assets/js/jquery-2.1.4.min.js"></script>
-	<script src="/mrkm/assets/js/jquery.easing.1.3.js"></script>
-	<script src="/mrkm/assets/js/script.js"></script>
+	<script src="../assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
+	<script src="../assets/js/script.js"></script> -->
+	<script src="/assets/js/jquery-2.1.4.min.js"></script>
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<script src="/assets/js/script.js"></script>
 
 
 

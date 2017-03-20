@@ -2077,7 +2077,7 @@ textarea,
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: url(/mrkm/assets/img/background-material/Body.svg), url(/mrkm/assets/img/background-material/Body2.svg);
+  background-image: url(../img/background-material/Body.svg), url(../img/background-material/Body2.svg);
   background-position: left top, right bottom;
   background-size: 66.6% 100%,  50% 16%;
   background-repeat: no-repeat;
@@ -2200,7 +2200,7 @@ textarea,
 
 /* line 3, pages/_profile.scss */
 .profile {
-  background-image: url(/mrkm/assets/img/background-material/trees.png), url(/mrkm/assets/img/background-material/border2.svg), url(/mrkm/assets/img/background-material/profile-title.png), radial-gradient(#aa5e5e 30%, #9c3737 100%);
+  background-image: url(../img/background-material/trees.png), url(../img/background-material/border2.svg), url(../img/background-material/profile-title.png), radial-gradient(#aa5e5e 30%, #9c3737 100%);
   background-position: center bottom, center, right top, center;
   background-size: 100% auto, 40px 10px, 180px auto, 100% auto;
   background-repeat: no-repeat, repeat, no-repeat, no-repeat;
@@ -2213,7 +2213,7 @@ textarea,
   @media only screen and (max-width: 640px) {
     /* line 3, pages/_profile.scss */
     .profile {
-      background-image: url(/mrkm/assets/img/background-material/trees.png), url(/mrkm/assets/img/background-material/border2.svg), radial-gradient(#aa5e5e 30%, #9c3737 100%);
+      background-image: url(../img/background-material/trees.png), url(../img/background-material/border2.svg), radial-gradient(#aa5e5e 30%, #9c3737 100%);
       background-position: center bottom, center, center;
       background-size: 200% auto, 40px 10px, 100% auto;
       background-repeat: no-repeat, repeat, no-repeat; } }

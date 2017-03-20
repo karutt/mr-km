@@ -10724,7 +10724,7 @@ var PARAM_COUNT = 0;
 var EMPTY_VAR = 1;
 var WRONG_TYPE = 2;
 var FILE_LOAD = 3;
-// p5.js blue, /mrkm/assets/p5/MobiusNet/libraries/p5.js orange, auto dark green; fallback p5.js darkened magenta
+// p5.js blue, p5.js orange, auto dark green; fallback p5.js darkened magenta
 // See testColors below for all the color codes and names
 var typeColors = ['#2D7BB6', '#EE9900', '#4DB200', '#C83C00'];
 function report(message, func, color) {
@@ -13974,7 +13974,7 @@ p5.prototype.noLoop = function() {
   this._loop = false;
 };
 /**
- * By default, /mrkm/assets/p5/MobiusNet/libraries/p5.js loops through draw() continuously, executing the code
+ * By default, p5.js loops through draw() continuously, executing the code
  * within it. However, the draw() loop may be stopped by calling noLoop().
  * In that case, the draw() loop can be resumed with loop().
  *
@@ -26756,7 +26756,7 @@ p5.prototype.textStyle = function(theStyle) {
  * text(aChar, 0, 40);
  * line(cWidth, 0, cWidth, 50);
  *
- * var aString = "/mrkm/assets/p5/MobiusNet/libraries/p5.js";
+ * var aString = "p5.js";
  * var sWidth = textWidth(aString);
  * text(aString, 0, 85);
  * line(sWidth, 50, sWidth, 100);
