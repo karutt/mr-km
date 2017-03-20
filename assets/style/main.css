@@ -1468,6 +1468,410 @@ textarea,
 .display-none {
   display: none !important; }
 
+/**
+* SyntaxHighlighter
+* http://alexgorbatchev.com/SyntaxHighlighter
+*
+* SyntaxHighlighter is donationware. If you are using it, please donate.
+* http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+*
+* @version
+* 3.0.83 (July 02 2010)
+*
+* @copyright
+* Copyright (C) 2004-2010 Alex Gorbatchev.
+*
+* @license
+* Dual licensed under the MIT and GPL licenses.
+*/
+/* line 17, base/lib/p5JS.scss */
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+  -moz-border-radius: 0 0 0 0 !important;
+  -webkit-border-radius: 0 0 0 0 !important;
+  background: none !important;
+  border: 0 !important;
+  bottom: auto !important;
+  float: none !important;
+  height: auto !important;
+  left: auto !important;
+  line-height: 1.6em !important;
+  margin: 0 !important;
+  outline: 0 !important;
+  overflow: visible !important;
+  padding: 10px 0 !important;
+  position: static !important;
+  right: auto !important;
+  text-align: left !important;
+  top: auto !important;
+  vertical-align: baseline !important;
+  width: auto !important;
+  box-sizing: content-box !important;
+  font-family: "inconsolatamedium", "Consolas", "Monaco", "Andale Mono", "monospace" !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 14px !important;
+  min-height: inherit !important;
+  min-height: auto !important;
+  color: #222 !important; }
+
+/* line 56, base/lib/p5JS.scss */
+.syntaxhighlighter {
+  width: 100% !important;
+  margin: 0em 0 0em 0 !important;
+  position: relative !important;
+  overflow: auto !important;
+  font-size: 1em !important; }
+
+/* line 63, base/lib/p5JS.scss */
+.syntaxhighlighter.source {
+  overflow: hidden !important; }
+
+/* line 66, base/lib/p5JS.scss */
+.syntaxhighlighter .bold {
+  font-weight: bold !important; }
+
+/* line 69, base/lib/p5JS.scss */
+.syntaxhighlighter .italic {
+  font-style: italic !important; }
+
+/* line 72, base/lib/p5JS.scss */
+.syntaxhighlighter .line {
+  white-space: pre !important; }
+
+/* line 75, base/lib/p5JS.scss */
+.syntaxhighlighter table {
+  width: 100% !important; }
+
+/* line 78, base/lib/p5JS.scss */
+.syntaxhighlighter table caption {
+  text-align: left !important;
+  padding: .5em 0 0.5em 1em !important; }
+
+/* line 82, base/lib/p5JS.scss */
+.syntaxhighlighter table td.code {
+  width: 100% !important; }
+
+/* line 85, base/lib/p5JS.scss */
+.syntaxhighlighter table td.code .container {
+  position: relative !important;
+  padding-left: 10px !important; }
+
+/* line 90, base/lib/p5JS.scss */
+.syntaxhighlighter table td.code .container textarea {
+  box-sizing: border-box !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  background: white !important;
+  padding-left: 1em !important;
+  overflow: hidden !important;
+  white-space: pre !important; }
+
+/* line 103, base/lib/p5JS.scss */
+.syntaxhighlighter table td.gutter .line {
+  text-align: right !important;
+  padding: 0 0.5em 0 1em !important; }
+
+/* line 107, base/lib/p5JS.scss */
+.syntaxhighlighter table td.code .line {
+  padding: 0 1em !important; }
+
+/* line 110, base/lib/p5JS.scss */
+.syntaxhighlighter.nogutter td.code .container textarea, .syntaxhighlighter.nogutter td.code .line {
+  padding-left: 0em !important; }
+
+/* line 113, base/lib/p5JS.scss */
+.syntaxhighlighter.show {
+  display: block !important; }
+
+/* line 116, base/lib/p5JS.scss */
+.syntaxhighlighter.collapsed table {
+  display: none !important; }
+
+/* line 119, base/lib/p5JS.scss */
+.syntaxhighlighter.collapsed .toolbar {
+  padding: 0.1em 0.8em 0em 0.8em !important;
+  font-size: 1em !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important; }
+
+/* line 126, base/lib/p5JS.scss */
+.syntaxhighlighter.collapsed .toolbar span {
+  display: inline !important;
+  margin-right: 1em !important; }
+
+/* line 130, base/lib/p5JS.scss */
+.syntaxhighlighter.collapsed .toolbar span a {
+  padding: 0 !important;
+  display: none !important; }
+
+/* line 134, base/lib/p5JS.scss */
+.syntaxhighlighter.collapsed .toolbar span a.expandSource {
+  display: inline !important; }
+
+/* line 137, base/lib/p5JS.scss */
+.syntaxhighlighter .toolbar {
+  position: absolute !important;
+  right: 1px !important;
+  top: 1px !important;
+  width: 11px !important;
+  height: 11px !important;
+  font-size: 10px !important;
+  z-index: 10 !important; }
+
+/* line 146, base/lib/p5JS.scss */
+.syntaxhighlighter .toolbar span.title {
+  display: inline !important; }
+
+/* line 149, base/lib/p5JS.scss */
+.syntaxhighlighter .toolbar a {
+  display: block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  padding-top: 1px !important; }
+
+/* line 155, base/lib/p5JS.scss */
+.syntaxhighlighter .toolbar a.expandSource {
+  display: none !important; }
+
+/* line 158, base/lib/p5JS.scss */
+.syntaxhighlighter.ie {
+  font-size: .9em !important;
+  padding: 1px 0 1px 0 !important; }
+
+/* line 162, base/lib/p5JS.scss */
+.syntaxhighlighter.ie .toolbar {
+  line-height: 8px !important; }
+
+/* line 165, base/lib/p5JS.scss */
+.syntaxhighlighter.ie .toolbar a {
+  padding-top: 0px !important; }
+
+/* line 168, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .line.alt1 .content,
+.syntaxhighlighter.printing .line.alt2 .content,
+.syntaxhighlighter.printing .line.highlighted .number,
+.syntaxhighlighter.printing .line.highlighted.alt1 .content,
+.syntaxhighlighter.printing .line.highlighted.alt2 .content {
+  background: none !important; }
+
+/* line 175, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .line .number {
+  color: #bbbbbb !important; }
+
+/* line 178, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .line .content {
+  color: black !important; }
+
+/* line 181, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .toolbar {
+  display: none !important; }
+
+/* line 184, base/lib/p5JS.scss */
+.syntaxhighlighter.printing a {
+  text-decoration: none !important; }
+
+/* line 187, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .plain, .syntaxhighlighter.printing .plain a {
+  color: #222 !important; }
+
+/* line 190, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .comments, .syntaxhighlighter.printing .comments a {
+  color: #A0A0A0 !important; }
+
+/* line 193, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .string, .syntaxhighlighter.printing .string a {
+  color: blue !important; }
+
+/* line 196, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .keyword {
+  color: #006699 !important;
+  font-weight: normal !important; }
+
+/* line 200, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .preprocessor {
+  color: gray !important; }
+
+/* line 203, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .variable {
+  color: #aa7700 !important; }
+
+/* line 206, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .value {
+  color: #147d9f !important; }
+
+/* line 209, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .functions {
+  color: #DC3787 !important; }
+
+/* line 212, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .constants {
+  color: #0066cc !important; }
+
+/* line 215, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .script {
+  font-weight: bold !important; }
+
+/* line 218, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .color1, .syntaxhighlighter.printing .color1 a {
+  color: #A67F59 !important; }
+
+/* line 221, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .color2, .syntaxhighlighter.printing .color2 a {
+  color: #3187B6 !important; }
+
+/* line 224, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .color3, .syntaxhighlighter.printing .color3 a {
+  color: red !important; }
+
+/* line 227, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .break, .syntaxhighlighter.printing .break a {
+  color: black !important; }
+
+/* line 231, base/lib/p5JS.scss */
+.syntaxhighlighter {
+  background-color: white !important; }
+
+/* line 234, base/lib/p5JS.scss */
+.syntaxhighlighter .line.alt1 {
+  background-color: white !important; }
+
+/* line 237, base/lib/p5JS.scss */
+.syntaxhighlighter .line.alt2 {
+  background-color: white !important; }
+
+/* line 240, base/lib/p5JS.scss */
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+  background-color: #f2eae5 !important; }
+
+/* line 243, base/lib/p5JS.scss */
+.syntaxhighlighter .line.highlighted.number {
+  color: black !important; }
+
+/* line 246, base/lib/p5JS.scss */
+.syntaxhighlighter table caption {
+  color: black !important; }
+
+/* line 249, base/lib/p5JS.scss */
+.syntaxhighlighter .gutter {
+  color: #afafaf !important; }
+
+/* line 252, base/lib/p5JS.scss */
+.syntaxhighlighter .gutter .line {
+  color: #888 !important; }
+
+/* line 256, base/lib/p5JS.scss */
+.syntaxhighlighter .gutter .line.highlighted {
+  background-color: #6ce26c !important;
+  color: white !important; }
+
+/* line 260, base/lib/p5JS.scss */
+.syntaxhighlighter.printing .line .content {
+  border: none !important; }
+
+/* line 263, base/lib/p5JS.scss */
+.syntaxhighlighter.collapsed {
+  overflow: visible !important; }
+
+/* line 266, base/lib/p5JS.scss */
+.syntaxhighlighter.collapsed .toolbar {
+  color: blue !important;
+  background: white !important;
+  border: 1px solid #6ce26c !important; }
+
+/* line 271, base/lib/p5JS.scss */
+.syntaxhighlighter.collapsed .toolbar a {
+  color: blue !important; }
+
+/* line 274, base/lib/p5JS.scss */
+.syntaxhighlighter.collapsed .toolbar a:hover {
+  color: red !important; }
+
+/* line 277, base/lib/p5JS.scss */
+.syntaxhighlighter .toolbar {
+  color: white !important;
+  background: #6ce26c !important;
+  border: none !important; }
+
+/* line 282, base/lib/p5JS.scss */
+.syntaxhighlighter .toolbar a {
+  color: white !important; }
+
+/* line 285, base/lib/p5JS.scss */
+.syntaxhighlighter .toolbar a:hover {
+  color: black !important; }
+
+/* line 288, base/lib/p5JS.scss */
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+  color: #222 !important; }
+
+/* line 291, base/lib/p5JS.scss */
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+  color: #A0A0A0 !important; }
+
+/* line 294, base/lib/p5JS.scss */
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+  color: blue !important; }
+
+/* line 297, base/lib/p5JS.scss */
+.syntaxhighlighter .keyword {
+  color: #006699 !important; }
+
+/* line 300, base/lib/p5JS.scss */
+.syntaxhighlighter .preprocessor {
+  color: gray !important; }
+
+/* line 303, base/lib/p5JS.scss */
+.syntaxhighlighter .variable {
+  color: #aa7700 !important; }
+
+/* line 306, base/lib/p5JS.scss */
+.syntaxhighlighter .value {
+  color: #147d9f !important; }
+
+/* line 309, base/lib/p5JS.scss */
+.syntaxhighlighter .functions {
+  color: #DC3787 !important; }
+
+/* line 312, base/lib/p5JS.scss */
+.syntaxhighlighter .constants {
+  color: #00a1d3 !important; }
+
+/* line 315, base/lib/p5JS.scss */
+.syntaxhighlighter .script {
+  font-weight: normal !important;
+  color: #006699 !important;
+  background-color: none !important; }
+
+/* line 320, base/lib/p5JS.scss */
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+  color: #A67F59 !important; }
+
+/* line 323, base/lib/p5JS.scss */
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
+  color: #3187B6 !important; }
+
+/* line 326, base/lib/p5JS.scss */
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
+  color: red !important; }
+
+/* line 330, base/lib/p5JS.scss */
+.syntaxhighlighter .keyword {
+  font-weight: #DC3787 !important; }
+
 /* line 3, components/parts/_link.scss */
 .link {
   text-decoration: none;
@@ -1480,7 +1884,6 @@ textarea,
 /* line 3, components/common/_header.scss */
 .Header {
   background-color: transparent;
-  transition: .1s;
   position: fixed;
   display: flex;
   justify-content: flex-end;
@@ -1503,20 +1906,20 @@ textarea,
   .Header-scroll {
     box-shadow: 0 3px 5px 2px rgba(0, 0, 0, 0.1);
     background: #fff; }
-  /* line 34, components/common/_header.scss */
+  /* line 35, components/common/_header.scss */
   .Header-head {
     margin-right: auto;
     display: none; }
-    /* line 37, components/common/_header.scss */
+    /* line 38, components/common/_header.scss */
     .Header-head-phrase {
       font-size: 16px;
       color: #555;
       font-weight: bold; }
-  /* line 44, components/common/_header.scss */
+  /* line 45, components/common/_header.scss */
   .Header-menu {
     display: flex;
     list-style-type: none; }
-    /* line 47, components/common/_header.scss */
+    /* line 48, components/common/_header.scss */
     .Header-menu-item {
       display: block;
       line-height: 60px;
@@ -1526,15 +1929,78 @@ textarea,
       padding-top: 4px;
       transition: color .7s; }
       @media only screen and (max-width: 640px) {
-        /* line 47, components/common/_header.scss */
+        /* line 48, components/common/_header.scss */
         .Header-menu-item {
           font-size: 12px;
           padding: 0 7px;
           padding-top: 4px; } }
-      /* line 60, components/common/_header.scss */
+      /* line 61, components/common/_header.scss */
       .Header-menu-item:hover {
         transition: color .2s;
         color: #aaa; }
+
+/* line 4, components/common/_workHeader.scss */
+.WorkHeader {
+  background-color: rgba(51, 51, 51, 0.5);
+  position: fixed;
+  display: flex;
+  padding: 0 7%;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  z-index: 2; }
+  /* line 18, components/common/_workHeader.scss */
+  .WorkHeader-logo {
+    height: 35px;
+    width: auto;
+    padding-top: 0px; }
+    @media only screen and (max-width: 640px) {
+      /* line 18, components/common/_workHeader.scss */
+      .WorkHeader-logo {
+        height: 25px;
+        width: auto; } }
+  /* line 28, components/common/_workHeader.scss */
+  .WorkHeader-scroll {
+    box-shadow: 0 3px 5px 2px rgba(0, 0, 0, 0.1);
+    background: #fff; }
+  /* line 37, components/common/_workHeader.scss */
+  .WorkHeader-head-phrase {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold; }
+  /* line 45, components/common/_workHeader.scss */
+  .WorkHeader-body {
+    display: flex;
+    width: 100%;
+    justify-content: center; }
+  /* line 51, components/common/_workHeader.scss */
+  .WorkHeader-menu {
+    margin-left: -66px;
+    display: flex;
+    list-style-type: none; }
+    /* line 56, components/common/_workHeader.scss */
+    .WorkHeader-menu-item {
+      display: block;
+      line-height: 60px;
+      color: #ddd;
+      font-size: 14px;
+      padding: 0 15px;
+      padding-top: 4px;
+      transition: color .7s; }
+      @media only screen and (max-width: 640px) {
+        /* line 56, components/common/_workHeader.scss */
+        .WorkHeader-menu-item {
+          font-size: 12px;
+          padding: 0 7px;
+          padding-top: 4px; } }
+      /* line 69, components/common/_workHeader.scss */
+      .WorkHeader-menu-item:hover {
+        transition: color .2s;
+        color: #fff; }
+    /* line 75, components/common/_workHeader.scss */
+    .WorkHeader-menu-image {
+      width: 30px;
+      height: 30px; }
 
 /* line 3, components/common/_footer.scss */
 .Footer {
@@ -1673,7 +2139,7 @@ textarea,
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: -20px; }
+    margin-bottom: 0px; }
   /* line 35, pages/_category.scss */
   .category-panel {
     position: relative; }
@@ -1692,13 +2158,14 @@ textarea,
     margin-left: 10px;
     display: none;
     text-transform: capitalize; }
-  /* line 62, pages/_category.scss */
+  /* line 64, pages/_category.scss */
   .category-link {
     position: relative;
     display: block;
     text-align: center;
-    padding: 20px 10px; }
-  /* line 69, pages/_category.scss */
+    padding: 0 10px;
+    margin-bottom: 18px; }
+  /* line 72, pages/_category.scss */
   .category-img {
     background: #aaa;
     width: 100%;
@@ -1706,26 +2173,26 @@ textarea,
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
     background-clip: padding-box;
     border: solid 3px #fff; }
-  /* line 78, pages/_category.scss */
+  /* line 81, pages/_category.scss */
   .category-hoverBord {
     position: absolute;
     display: none;
-    margin: 20px 10px;
+    margin: 0 10px;
     width: calc(100% - 20px);
-    height: calc(100% - 40px);
+    height: calc(100%);
     padding: 20px;
     background: rgba(18, 190, 221, 0.6);
     top: 0;
     left: 0;
     box-sizing: border-box; }
-    /* line 89, pages/_category.scss */
+    /* line 92, pages/_category.scss */
     .category-hoverBord-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 100%; }
-    /* line 96, pages/_category.scss */
+    /* line 99, pages/_category.scss */
     .category-hoverBord-p {
       position: relative;
       top: 10px;
@@ -1806,34 +2273,49 @@ textarea,
       color: #fff; }
 
 /* line 3, pages/_work.scss */
-.code {
+.source {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   background: #000; }
-  /* line 10, pages/_work.scss */
-  .code video {
+  /* line 11, pages/_work.scss */
+  .source video {
     max-width: 864px;
     height: auto; }
 
-/* line 18, pages/_work.scss */
-.explanation {
-  padding: 6% 14%;
-  font-size: 13px;
-  color: #555; }
-  @media only screen and (max-width: 640px) {
-    /* line 18, pages/_work.scss */
-    .explanation {
-      padding: 50px 14%; } }
-  /* line 25, pages/_work.scss */
-  .explanation-head {
-    font-size: 25px;
-    margin-bottom: 30px;
-    font-weight: bold; }
+/* line 17, pages/_work.scss */
+.information {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 60px;
+  background: #eee;
+  overflow: scroll;
+  display: none; }
+  /* line 29, pages/_work.scss */
+  .information-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 10%; }
+  /* line 37, pages/_work.scss */
+  .information-header {
+    font-size: 35px;
+    margin-bottom: 35px;
+    color: #555; }
+  /* line 43, pages/_work.scss */
+  .information-body {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8em;
+    text-align: center; }
 
-/* line 32, pages/_work.scss */
+/* line 129, pages/_work.scss */
 iframe {
   width: 100%;
   height: 100%; }

@@ -1,85 +1,314 @@
 <!doctype html>
 <html lang='ja'>
 <head prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#'>
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta charset="utf-8">
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-  <meta property="og:locale" content="ja_JP"/>
-  <meta property="og:locale:alternate" content="ja_JP"/>
-  <meta property="og:site_name" content="km-mr.net"/>
-  <meta property="og:description" content="Mitsuru Koyama Portfolio"/>
-  <meta property="og:image" content="https://karutt.github.io/mrkm/assets/img/ogpImage.png"/>
-  <meta property="og:image:secure_url" content="https://karutt.github.io/mrkm/assets/img/ogpImage.png"/>
-  <meta property="og:image:type" content="image/png"/>
-  <meta property="og:image:width" content="600"/>
-  <meta property="og:image:height" content="600"/>
-  <meta property="og:title" content="Mesh Art"/>
-  <meta property="og:url" content="https://karutt.github.io/meshArt/"/>
+	<meta property="og:locale" content="ja_JP"/>
+	<meta property="og:locale:alternate" content="ja_JP"/>
+	<meta property="og:site_name" content="km-mr.net"/>
+	<meta property="og:description" content="Mitsuru Koyama Portfolio"/>
+	<meta property="og:image" content="https://karutt.github.io/mrkm/assets/img/ogpImage.png"/>
+	<meta property="og:image:secure_url" content="https://karutt.github.io/mrkm/assets/img/ogpImage.png"/>
+	<meta property="og:image:type" content="image/png"/>
+	<meta property="og:image:width" content="600"/>
+	<meta property="og:image:height" content="600"/>
+	<meta property="og:title" content="Mesh Art"/>
+	<meta property="og:url" content="https://karutt.github.io/meshArt/"/>
 
-  <title>Mesh Art</title>
+	<title>Mesh Art</title>
 
-  <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link href="/mrkm/assets/style/main.css" rel="stylesheet" />
+	<link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="/mrkm/assets/style/main.css" rel="stylesheet" />
+	<script src="/mrkm/assets/js/syntaxhightlighter.js"></script>
+	<script type="text/javascript">
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	// SyntaxHighlighter.defaults['gutter'] = false;
+	SyntaxHighlighter.all();
+	</script>
 
 </head>
 
 <body class="meshArt meshArt_index">
 
-  
-<header class="Header">
+	
+<WorkHeader class="WorkHeader">
 
-	<div class="Header-head">
-		<a href="../" class="Header-head-phrase"><img src="/mrkm/assets/img/logo.png" alt="" class="Header-logo" /></a>
+
+	<div class="WorkHeader-head">
+		<a href="../" class="WorkHeader-head-phrase"><img src="/mrkm/assets/img/logo2.png" alt="" class="WorkHeader-logo" /></a>
 	</div>
 
-	<div class="Header-body">
-		<ul class="Header-menu">
-			<li><a href="../#category" class="Header-menu-item">Work</a></li>
-			<li><a href="../#concept" class="Header-menu-item">Concept</a></li>
-			<li><a href="../#profile" class="Header-menu-item active">Profile</a></li>
+
+
+	<!-- <div class="WorkHeader-body">
+		<ul class="WorkHeader-menu">
+			<li><a href="../#category" class="WorkHeader-menu-item">Work</a></li>
+			<li><a href="../#concept" class="WorkHeader-menu-item">Concept</a></li>
+			<li><a href="../#profile" class="WorkHeader-menu-item active">Profile</a></li>
+		</ul>
+	</div> -->
+
+	<div class="WorkHeader-body">
+		<ul class="WorkHeader-menu">
+			<li>
+<a href=".info1" class="WorkHeader-menu-item">			<img src="/mrkm/assets/img/background-material/infoImage.png" class="WorkHeader-menu-image" alt="Infoimage" />
+</a>			</li>
+			<li><a href=".info2" class="WorkHeader-menu-item" style="margin-top: 2px">	&lt;/&gt;</a></li>
+			<!-- <li><a href="../#category" class="WorkHeader-menu-item">Work</a></li> -->
+
 		</ul>
 	</div>
 
-</header>
+
+</WorkHeader>
 
 
-<div class="code">
-	<video src="../assets/img/movie/meshArt.mp4"　class="code-movie" loop="true" autoplay="">
+<div class="source">
+	<video src="../assets/img/movie/meshArt.mp4"　class="source-movie" loop="true" autoplay="">
 	</video>
 </div>
 
-<div class="explanation">
-	<h1 class="explanation-head">Mesh art</h1>
-	<div class="explanation-body">
-		SFもののビジュアル化されたデータによくでてくるアニメーションです。３Dアニメーションは何かと
-		複雑そうに見えますが、極座標による球面座標の求め方を知っていれば、思いの外簡単に作ることができます。
-		以下の式が球面座標になります。
+<div class="information info1">
+	<div class="information-wrapper">
+		<div class="information-header">Mesh Art</div>
+		<div class="information-body">
+			SF映画・SFアニメなどにありそうなデータ群を近未来的に視覚化したアニメーションです。
+			複雑そうな動きに見えますが仕組みを説明すると、
+			球面を細くカットし、色をつけ、回転させているだけです。
+			これは球面すなわち曲面を作り出すためのテクニックを理解すれば、簡単に実装できます。
+			球を描画すること自体は、sphere()関数を使うことが最も速いですが、欲しいのは球体の一部分です。
+			これらの部分的な曲面にアクセスするためには、球を数式で作るところから始めました。
+			立方体や球、複雑な３次元の立体図形を生成するには、数式を利用するのが最も簡単です。
+			また立体図形の全ての基礎となるものは、２次元グリットに並べられた点です。
+			この点が出来上がれば、グリッド上にできた点xとyの値を使い、点zの位置を決めていきます。
+			球面お方程式は空間座標，ベクトル，極座標といった様々な方法で表すことができますが、processing（というか機械の世界全般）で扱いやすい
+			三角関数を使った極座標で球を実装します。<br><br>
+<span>
+			x = sin(α)・sin(β)・r;<br>
+			y = sin(α)・cos(β)・r;<br>
+			z = cos(α)・r;
+</span>
+<br><br>
 
-		<br><br>
-		x = sinα・cosβ・r <br>
-		y = sinα・sinβ・r <br>
-		z = sinα・r
-		<br><br>
-
-		この座標から部分的な球面を作ります。３D空間に面を置きたい場合、どうすれば良いでしょうか。
-		初めは簡単な100×100の長方形について考えてみましょう。長方形は平面（曲がったり、穴が開いたりしない）であるため、xとy座標だけについて考えれば良さそうです。
-		また、今後のために面を表す時の解像度についても考慮してコードを書いてみます。
-		int x
+出来上がった球面の媒介変数α、βを調整して、球面を細くカットしていきます。
+あとはそれらのオブジェクトをどうデザインするかの問題ですが、
+オブジェクトの半径rや色を乱数や段階的な透過度・色の変化をつけることにより、近未来風に仕上げました。
 
 
+		</div>
 	</div>
 </div>
 
+<div class="information info2">
+	<pre class="brush:pde">
+		void draw() {
+			float xCount = 20;
+			float yCount = 20;
+			scale(40);
+			strokeWeight(1/40.0);
+			for(int y = 0; y < yCount; y++) {
+				beginShape(TRIANGLE_STRIP);
+				for(int x = 0; x <= xCount; x++) {
+					vertex(x, y);
+					vertex(x, y+1);
+				}
+				endShape();
+			}
+		}
+		void draw() {
+			float xCount = 20;
+			float yCount = 20;
+			scale(40);
+			strokeWeight(1/40.0);
+			for(int y = 0; y < yCount; y++) {
+				beginShape(TRIANGLE_STRIP);
+				for(int x = 0; x <= xCount; x++) {
+					vertex(x, y);
+					vertex(x, y+1);
+				}
+				endShape();
+			}
+		}
+		void draw() {
+			float xCount = 20;
+			float yCount = 20;
+			scale(40);
+			strokeWeight(1/40.0);
+			for(int y = 0; y < yCount; y++) {
+				beginShape(TRIANGLE_STRIP);
+				for(int x = 0; x <= xCount; x++) {
+					vertex(x, y);
+					vertex(x, y+1);
+				}
+				endShape();
+			}
+		}
 
-<!--
-  <script src="/mrkm/assets/js/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="/mrkm/assets/js/jquery.easing.1.3.js"></script>
-  <script src="/mrkm/assets/js/script.js"></script> -->
-  <script src="/mrkm/assets/js/jquery-2.1.4.min.js"></script>
-  <script src="/mrkm/assets/js/jquery.easing.1.3.js"></script>
-  <script src="/mrkm/assets/js/script.js"></script>
+	</pre>
+</div>
+<!-- <div class="explanation">
+<div class="explanation-wrapper">
+
+<h1 class="explanation-h1">Mesh art 解説</h1>
+
+<ul class="explanation-list">
+<li><a href="#list1" class="explanation-list-item">概要</a></li>
+<li><a href="#list2" class="explanation-list-item">2次元グリッド</a></li>
+<li><a href="#list3" class="explanation-list-item">曲面を作る</a></li>
+<li><a href="#list4" class="explanation-list-item">第２の座標系</a></li>
+<li><a href="#list5" class="explanation-list-item">球を作る</a></li>
+</ul>
+
+<h2 class="explanation-h2" id="list1">概要</h2>
+<div class="explanation-body">
+SF映画・アニメなどにありそうな、データ群をスタイリッシュに視覚化したアニメーションです。
+複雑そうな動きに見えますが、仕組みを説明すると、
+球面を細くカットし、色をつけ、回転させているだけです。
+ですので、『球面』、もっと言えば『曲面』をどのように作り出すかを理解すれば、簡単に作ることができます。
+球を描画すること自体は、sphere()関数を使うことが最も早いですが、欲しいのは球体の一部分です。
+これらの部分的な曲面にアクセスするためには、球を数式で作るところから始めます。
+以下では、Processingでの実装方法を解説していきます。
+</div>
+
+<h2 class="explanation-h2" id="list2">2次元グリッド</h2>
+<div class="explanation-body">
+
+立方体や球、複雑な３次元の立体図形を生成するには、数式を利用するのが最も簡単です。
+全ての基礎となるものは、２次元グリットに並べられた点です。
+この点さえあれば、あとは数式に従い３次元空間上に割り当てていくだけです。
+
+２次元グリッドは以下のように実装します。
+
+<pre class="brush:pde">
+void draw() {
+float xCount = 20;
+float yCount = 20;
+scale(40);
+strokeWeight(1/40.0);
+for(int y = 0; y < yCount; y++) {
+beginShape(TRIANGLE_STRIP);
+for(int x = 0; x <= xCount; x++) {
+vertex(x, y);
+vertex(x, y+1);
+}
+endShape();
+}
+}
+</pre>
+
+<img src="/mrkm/assets/img/meshArt/code1.png" class="explanation-image" alt="Code1" />
+
+beginshape(), vertex(), endShape(),の３つの関数を使い、格子状に並ぶ点から、順次タイルの平面を作ります。
+<img src="/mrkm/assets/img/meshArt/grid2d.png" class="explanation-image" alt="Grid2d" />
+３つの関数について詳しく知りたい場合は,Processing公式サイトの
+<a href="https://processing.org/reference/beginShape_.html" target="_blank">リファレンス</a>を参照してください。図を使いわかりやすく説明がされています。
+</div>
+<h2 class="explanation-h2" id="list3">曲面を作る</h2>
+<div class="explanation-body">
+前章で実装したのはxとy軸にある２次元グリッドからなる平面でした。ここへ、グリッド上にできた点xとyの値を使いz軸の位置を決めていきます。
+<pre class="brush:pde; highlight: [9, 10,12]">
+void draw() {
+float xCount = 20;
+float yCount = 20;
+scale(40);
+strokeWeight(1/40.0);
+for(int y = 0; y < yCount; y++) {
+beginShape(TRIANGLE_STRIP);
+for(int x = 0; x <= xCount; x++) {
+float dist = sqrt(x*x + y*y);
+float z = sin(dist);
+vertex(x, y, z);
+z = sin(sqrt(x*x+(y+1)*(y+1));
+vertex(x, y+1, z);
+}
+endShape();
+}
+}
+</pre>
+
+結果を見てみましょう。
+<img src="/mrkm/assets/img/meshArt/code2.png" class="explanation-image" alt="Code2" />
+float dist = sqrt(x*x + y*y);<br>
+この行は原点を中心に、離れれば離れるほど距離(dist)が大きくなることを示します。
+それを三角関数sinの角度として割り当てます。そうすると、原点を中心としたサインカーブが生まれ、
+水面へ石を投げ込んだ時のような波ができます。
+</div>
+
+<h2 class="explanation-h2" id="list4">第2の座標系</h2>
+<div class="explanation-body">
+複雑な数式を用いる場合、元々のグリッドのための座標系と３次元に変換された図形のための座標系
+の２つを用意します。
+コードを見てみましょう。
+
+<pre class="brush:pde; highlight: [12,13, 15, 16, 17]">
+int uCount = 30;
+float uMin = 0;
+float uMax = 5;
+
+int vCount = 30;
+float vMin = -1;
+float vMax = 1;
+
+for (float iv = 0; iv < vCount; iv++) {
+beginShape(QUAD_STRIP);
+for (float iu = 0; iu <= uCount; iu++) {
+float u = map(iu, 0, uCount, uMin, uMax);
+float v = map(iv, 0, vCount, vMin, vMax);
+
+float x = u;
+float y = v;
+float z = cos(sqrt(u*u + v*v));
+vertex(x, y, z);
+
+v = map(iv+1, 0, vCount, vMin, vMax); //一つ下の格子点
+
+x = u;
+y = v;
+z = cos(sqrt(u*u + v*v));
+vertex(x, y, z);
+}
+endShape();
+}
+</pre>
+
+<img src="/mrkm/assets/img/meshArt/code4.png" class="explanation-image" alt="Code4" />
+
+u, vの媒介変数をuMin, uMaxとvMin, vMaxの規定された範囲の値で制御します。
+<img src="/mrkm/assets/img/meshArt/code3.png" class="explanation-image" alt="Code3" />
+これら変数で何ができるようになったのでしょうか。uMin, uMax, vMin, vMaxはu,vの範囲、
+すなわち曲面の大きさを調整できます。uCount, vCountはグリッドのキメの細かさ、すなわち
+曲面の滑らかさ・解像度を調整します。上の画像でu,vの範囲を変えずに　uCount = 100; vCount = 100;
+と変更したとしましょう。その場合グリッドの数は10×10から100×100へ変化し細かくなります。<br>
+数式の当てはめ方は先ほど一緒で、媒介変数u, vを介してx, y, zを定めているだけです。
+</div>
+<h2 class="explanation-h2" id="list5">球を作る</h2>
+<div class="explanation-body">
+さて、立体図形の作り方はわかりましたが、ピースが一つ足りません。球面の方程式です。
+空間座標，ベクトル，極座標といった様々な方法で表すことができますが、processing（というか機械の世界全般）で扱いやすい
+三角関数を使った極座標で球を実装しましょう。
+<pre class="brush:pde">
+x = sin(α)・sin(β)・r;
+y = sin(α)・cos(β)・r;
+z = cos(α)・r;
+</pre>
+
+数式がわかれば、これを先ほどのコードに書き加えるだけです。
+</div>
+</div> -->
+</div>
+
+
+	<!--
+	<script src="/mrkm/assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/mrkm/assets/js/jquery.easing.1.3.js"></script>
+	<script src="/mrkm/assets/js/script.js"></script> -->
+	<script src="/mrkm/assets/js/jquery-2.1.4.min.js"></script>
+	<script src="/mrkm/assets/js/jquery.easing.1.3.js"></script>
+	<script src="/mrkm/assets/js/script.js"></script>
+
 
 
 

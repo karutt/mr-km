@@ -10,7 +10,7 @@ function draw() {
    fill(255, 10);
    rect(-1, -1, width + 1, height + 1)
    system.addParticle();
-   system.applyForce(createVector(0, 0.1));
+  //  system.applyForce(createVector(0, 0.1));
    system.seek(createVector(mouseX, mouseY));
    system.run();
 }
