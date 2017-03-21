@@ -354,7 +354,7 @@
 
 /* line 294, p5JS.scss */
 .syntaxhighlighter .string, .syntaxhighlighter .string a {
-  color: blue !important; }
+  color: #d79d6d !important; }
 
 /* line 297, p5JS.scss */
 .syntaxhighlighter .keyword {

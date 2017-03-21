@@ -104,47 +104,152 @@
 
 <div class="information info2">
 	<pre class="brush:pde">
-		void draw() {
-			float xCount = 20;
-			float yCount = 20;
-			scale(40);
-			strokeWeight(1/40.0);
-			for(int y = 0; y < yCount; y++) {
-				beginShape(TRIANGLE_STRIP);
-				for(int x = 0; x <= xCount; x++) {
-					vertex(x, y);
-					vertex(x, y+1);
-				}
-				endShape();
-			}
+		int num = 300;
+		ArrayList<Sphere> spheres;
+
+		void setup() {
+		  size(1280, 720, P3D);
+
+		  spheres = new ArrayList<Sphere>();
+		  for (int i = 0; i < num; i++) {
+		    addSphere(i);
+		  }
 		}
+
 		void draw() {
-			float xCount = 20;
-			float yCount = 20;
-			scale(40);
-			strokeWeight(1/40.0);
-			for(int y = 0; y < yCount; y++) {
-				beginShape(TRIANGLE_STRIP);
-				for(int x = 0; x <= xCount; x++) {
-					vertex(x, y);
-					vertex(x, y+1);
-				}
-				endShape();
-			}
+
+		  background(0);
+
+			//control camera
+		  float r = 800;
+		  float a = frameCount*0.01;
+		  float b = frameCount*0.01/2;
+		  float x = sin(a)*cos(b)*r;
+		  float y = sin(a)*sin(b)*r;
+		  float z = cos(a)*r;
+		  camera(x, y, z, 0, 0, 0, 0, 1, 0);
+
+		  for (int i = spheres.size()-1; i >= 0; i--) {
+		    Sphere sp = spheres.get(i);
+		    sp.update();
+		    sp.display();
+		    if (sp.isDead()) {
+		      spheres.remove(i);
+		      addSphere(i);
+		    }
+		  }
 		}
-		void draw() {
-			float xCount = 20;
-			float yCount = 20;
-			scale(40);
-			strokeWeight(1/40.0);
-			for(int y = 0; y < yCount; y++) {
-				beginShape(TRIANGLE_STRIP);
-				for(int x = 0; x <= xCount; x++) {
-					vertex(x, y);
-					vertex(x, y+1);
-				}
-				endShape();
-			}
+
+		void addSphere(int i) {
+		  float len1 = random(PI/(40*noise(i/10) + 10));
+		  float len2 = random(PI);
+		  float xmin = random(-PI, PI-len1);
+		  float ymin = random(-PI/10, PI/10-len2);
+		  float xmax = xmin + len1;
+		  float ymax = ymin + len2;
+		  spheres.add( new Sphere(xmin, xmax, ymin, ymax, map(noise(i/5), 0, 1, 100, 400), i));
+		}
+
+		class Sphere {
+		  float xMin, xMax;
+		  float yMin, yMax;
+		  int xCount, yCount;
+		  float radius;
+		  PVector[][] points;
+
+		  color startColor;
+		  color endColor;
+		  color col;
+
+		  float angle;
+		  float randomAngle;
+
+		  float velocity;
+
+		  float lifespan;
+		  float lifespeed;
+
+		  int id;
+
+
+
+		  Sphere(float _xMin, float _xMax, float _yMin, float _yMax, float _radius, int _id) {
+		    xMin = _xMin;
+		    xMax = _xMax;
+		    yMin = _yMin;
+		    yMax = _yMax;
+
+		    xCount = 5;
+		    yCount = 20;
+		    radius = _radius;
+
+		    id = _id;
+
+		    points = new PVector[yCount+1][xCount+1];
+
+		    startColor = color(204, 102, 0);
+		    endColor = color(46, 211, 2);
+		    col = lerpColor(startColor, endColor, map(id, 0, num, 0, 1));
+
+		    angle = 0;
+		    randomAngle = TWO_PI*noise(id/10);
+
+		    velocity = random(-0.03, 0.03);
+
+		    lifespan = 1;
+		    lifespeed = random(1, 3);
+
+		    init();
+		  }
+
+		  void init() {
+		    for (int iv = 0; iv <= yCount; iv++) {
+		      for (int iu = 0; iu <= xCount; iu++) {
+		        float x = map(iu, 0, xCount, xMin, xMax);
+		        float y = map(iv, 0, yCount, yMin, yMax);
+		        points[iv][iu] = new PVector();
+		        points[iv][iu].x = sin(x)*sin(y) * radius;
+		        points[iv][iu].y = sin(x)*cos(y) * radius;
+		        points[iv][iu].z = cos(x) * radius;
+		      }
+		    }
+		  }
+
+		  void update() {
+		    angle += velocity;
+		    if (lifespan > 255) {
+		      lifespan = 255;
+		      lifespeed *= -1;
+		    }
+		    lifespan += lifespeed;
+		    startColor = color(204, 102, 0);
+		    endColor = color(46, 211, 2);
+		    col = lerpColor(startColor, endColor, map(id, 0, num, 0, 1));
+		  }
+
+		  void display() {
+		    fill(col, lifespan);
+		    stroke(col, 50);
+
+		    pushMatrix();
+		    rotateX(randomAngle);
+		    rotateZ(angle);
+
+		    for (int iv = 0; iv < yCount; iv++) {
+		      beginShape(TRIANGLE_STRIP);
+		      for (int iu = 0; iu <= xCount; iu++) {
+		        vertex(points[iv][iu].x, points[iv][iu].y, points[iv][iu].z);
+		        vertex(points[iv+1][iu].x, points[iv+1][iu].y, points[iv+1][iu].z);
+		      }
+		      endShape();
+		    }
+		    popMatrix();
+		  }
+
+		  boolean isDead() {
+		    if (lifespan < 0) return true;
+		    else return false;
+		  }
 		}
 
 	</pre>

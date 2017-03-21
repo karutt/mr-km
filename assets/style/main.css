@@ -491,7 +491,7 @@ textarea,
 
 /* line 2, base/lib/_bass.scss */
 .clearfix:after, .clearfix:before {
-  content: " ";
+  /*content:"";*/
   display: table; }
 
 /* line 2, base/lib/_bass.scss */
@@ -1824,7 +1824,7 @@ textarea,
 
 /* line 294, base/lib/p5JS.scss */
 .syntaxhighlighter .string, .syntaxhighlighter .string a {
-  color: blue !important; }
+  color: #d79d6d !important; }
 
 /* line 297, base/lib/p5JS.scss */
 .syntaxhighlighter .keyword {
@@ -2285,7 +2285,12 @@ textarea,
     max-width: 864px;
     height: auto; }
 
-/* line 17, pages/_work.scss */
+/* line 18, pages/_work.scss */
+iframe {
+  width: 100%;
+  height: 100%; }
+
+/* line 23, pages/_work.scss */
 .information {
   position: absolute;
   top: 0;
@@ -2296,29 +2301,24 @@ textarea,
   background: #eee;
   overflow: scroll;
   display: none; }
-  /* line 29, pages/_work.scss */
+  /* line 35, pages/_work.scss */
   .information-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5% 10%; }
-  /* line 37, pages/_work.scss */
+  /* line 43, pages/_work.scss */
   .information-header {
     font-size: 35px;
     margin-bottom: 35px;
     color: #555; }
-  /* line 43, pages/_work.scss */
+  /* line 49, pages/_work.scss */
   .information-body {
     color: #555;
     font-size: 14px;
     line-height: 1.8em;
     text-align: center; }
-
-/* line 129, pages/_work.scss */
-iframe {
-  width: 100%;
-  height: 100%; }
 
 /* line 1, utils/_space.scss */
 .italic {

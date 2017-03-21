@@ -13,6 +13,12 @@ $(function() {
 	confirmWindow();
 	ImageHover();
 
+//
+// var cw = $("canvas").width();
+// var ch = $("canvas").height();
+// alert(cw, ch);
+	// $("iframe").css("width": )
+
 
 	var isHover = false;
 	setTimeout(function(){
@@ -20,7 +26,7 @@ $(function() {
 			$("WorkHeader").stop().animate({opacity:'0'},500);
 		}
 	},2000);
-	
+
 	$('WorkHeader').on({
 		'mouseenter':function(){
 			isHover = true;
@@ -141,3 +147,19 @@ function ImageHover() {
 	function FbLink(){
 		window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkarutt.github.io%2Fmrkm%2F&amp;src=sdkpreparse', '', 'left='+ PosX +', top='+ PosY +', width='+ WinW +', height='+ WinH +', scrollbars=no');
 	}
+
+
+
+
+	(function(window, $){
+  $(window).load(function(){
+
+    var $frame = $('iframe');
+    var innerHeight = $('iframe').contents().find('canvas').width()
+    var innerWidth = $('iframe').contents().find('canvas').height()
+    $frame.attr('height', innerHeight + 'px');
+    $frame.attr('width', innerWidth + 'px');
+		$frame.css("width", innerHeight).css("height", innerWidth);
+		// alert(innerWidth);
+  })
+})(window, jQuery)
