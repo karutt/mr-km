@@ -2165,7 +2165,15 @@ textarea,
     text-align: center;
     padding: 0 10px;
     margin-bottom: 18px; }
-  /* line 72, pages/_category.scss */
+  /* line 71, pages/_category.scss */
+  .category .white {
+    background: #aaa;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    border: solid 3px #eee; }
+  /* line 79, pages/_category.scss */
   .category-img {
     background: #aaa;
     width: 100%;
@@ -2173,7 +2181,7 @@ textarea,
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
     background-clip: padding-box;
     border: solid 3px #fff; }
-  /* line 81, pages/_category.scss */
+  /* line 88, pages/_category.scss */
   .category-hoverBord {
     position: absolute;
     display: none;
@@ -2185,14 +2193,14 @@ textarea,
     top: 0;
     left: 0;
     box-sizing: border-box; }
-    /* line 92, pages/_category.scss */
+    /* line 99, pages/_category.scss */
     .category-hoverBord-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 100%; }
-    /* line 99, pages/_category.scss */
+    /* line 106, pages/_category.scss */
     .category-hoverBord-p {
       position: relative;
       top: 10px;

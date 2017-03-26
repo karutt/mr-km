@@ -13,6 +13,7 @@ $(function() {
 	confirmWindow();
 	ImageHover();
 
+
 //
 // var cw = $("canvas").width();
 // var ch = $("canvas").height();
@@ -153,6 +154,7 @@ function ImageHover() {
     var $frame = $('iframe');
     var innerHeight = $('iframe').contents().find('canvas').width()
     var innerWidth = $('iframe').contents().find('canvas').height()
+
     $frame.attr('height', innerHeight + 'px');
     $frame.attr('width', innerWidth + 'px');
 		$frame.css("width", innerHeight).css("height", innerWidth);

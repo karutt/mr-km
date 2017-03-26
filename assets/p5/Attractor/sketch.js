@@ -2,6 +2,7 @@ var G;
 var stop = true;
 var movers = [];
 var mover_num;
+test = 1;
 
 function setup() {
    createCanvas(windowWidth, windowHeight);
@@ -119,7 +120,6 @@ var Mover = function(_id) {
    this.diameter = 1.4;
    this.mass = this.diameter / 2;
 
-   console.log(this.id);
 
    this.r = 2 + this.id / 10000;
    this.g = 30 + this.id / 10000;
