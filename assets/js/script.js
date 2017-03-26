@@ -30,9 +30,7 @@ $(function() {
 	$('WorkHeader').on({
 		'mouseenter':function(){
 			isHover = true;
-
 			$(this).stop().animate({ opacity: 1}, 500);
-
 		},
 		'mouseleave':function(){
 			if(!$(".information").hasClass("active")) {
@@ -48,7 +46,6 @@ $(function() {
 		if(target == ".info1") other = ".info2";
 		else other = ".info1";
 		if(!$(target).hasClass("active")) {
-
 			if($(other).hasClass("active") && other == ".info2")	{
 				$(target).css("display", "block");
 				$(other).stop().fadeOut(300);
@@ -153,7 +150,6 @@ function ImageHover() {
 
 	(function(window, $){
   $(window).load(function(){
-
     var $frame = $('iframe');
     var innerHeight = $('iframe').contents().find('canvas').width()
     var innerWidth = $('iframe').contents().find('canvas').height()
