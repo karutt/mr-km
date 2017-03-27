@@ -159,5 +159,6 @@ function ImageHover() {
     $frame.attr('width', innerWidth + 'px');
 		$frame.css("width", innerHeight).css("height", innerWidth);
 		// alert(innerWidth);
+
   })
-})(window, jQuery)
+})(window, jQuery);

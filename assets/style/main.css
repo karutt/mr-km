@@ -2289,7 +2289,7 @@ textarea,
   height: 100%;
   background: #000; }
 
-/* line 12, pages/_work.scss */
+/* line 14, pages/_work.scss */
 .movie-wrap {
   display: flex;
   align-items: center;
@@ -2298,17 +2298,22 @@ textarea,
   height: 100%;
   background: #000; }
 
-/* line 23, pages/_work.scss */
+/* line 24, pages/_work.scss */
 .movie-size {
   width: 50%;
   height: 50%; }
 
-/* line 28, pages/_work.scss */
+/* line 29, pages/_work.scss */
 .movie-wrap iframe {
   width: 100%;
   height: 100%; }
 
-/* line 38, pages/_work.scss */
+/* line 34, pages/_work.scss */
+iframe {
+  width: 100%;
+  height: 100%; }
+
+/* line 39, pages/_work.scss */
 .information {
   position: absolute;
   top: 0;
@@ -2319,19 +2324,19 @@ textarea,
   background: #eee;
   overflow: scroll;
   display: none; }
-  /* line 50, pages/_work.scss */
+  /* line 51, pages/_work.scss */
   .information-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5% 10%; }
-  /* line 58, pages/_work.scss */
+  /* line 59, pages/_work.scss */
   .information-header {
     font-size: 35px;
     margin-bottom: 35px;
     color: #555; }
-  /* line 64, pages/_work.scss */
+  /* line 65, pages/_work.scss */
   .information-body {
     color: #555;
     font-size: 14px;
