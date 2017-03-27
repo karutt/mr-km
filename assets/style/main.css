@@ -2288,17 +2288,27 @@ textarea,
   width: 100%;
   height: 100%;
   background: #000; }
-  /* line 11, pages/_work.scss */
-  .source video {
-    max-width: 864px;
-    height: auto; }
 
-/* line 18, pages/_work.scss */
-iframe {
+/* line 12, pages/_work.scss */
+.movie-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #000; }
+
+/* line 23, pages/_work.scss */
+.movie-size {
+  width: 50%;
+  height: 50%; }
+
+/* line 28, pages/_work.scss */
+.movie-wrap iframe {
   width: 100%;
   height: 100%; }
 
-/* line 23, pages/_work.scss */
+/* line 38, pages/_work.scss */
 .information {
   position: absolute;
   top: 0;
@@ -2309,19 +2319,19 @@ iframe {
   background: #eee;
   overflow: scroll;
   display: none; }
-  /* line 35, pages/_work.scss */
+  /* line 50, pages/_work.scss */
   .information-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5% 10%; }
-  /* line 43, pages/_work.scss */
+  /* line 58, pages/_work.scss */
   .information-header {
     font-size: 35px;
     margin-bottom: 35px;
     color: #555; }
-  /* line 49, pages/_work.scss */
+  /* line 64, pages/_work.scss */
   .information-body {
     color: #555;
     font-size: 14px;
